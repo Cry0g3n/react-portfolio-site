@@ -1,0 +1,19 @@
+@import "../../../../assets/style/misc/fonts.scss";
+@import "../../../../assets/style/misc/media.scss";
+
+.copyright-auth {
+  color: #fff;
+  @include roboto(light);
+  position: absolute;
+  bottom: 35px;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @include phone {
+    bottom: 10px;
+  }
+  @include tablet {
+    bottom: 25px;
+  }
+}

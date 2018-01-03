@@ -1,0 +1,28 @@
+@import "../../../../assets/style/misc/fonts.scss";
+@import "../../../../assets/style/misc/colors.scss";
+@import "../../../../assets/style/misc/media.scss";
+
+.button__link {
+  padding: 0 30px;
+  color: white;
+  @include roboto(medium);
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+  right: (100/1800)*100%;
+  top: 24px;
+  font-size: 16px;
+  line-height: 36px;
+  box-sizing: border-box;
+  text-decoration: none;
+  &:hover {
+    background: white;
+    color: $dark_green;
+  }
+  @include phone {
+    left: 50%;
+    right: inherit;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+  }
+}

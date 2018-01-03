@@ -1,0 +1,31 @@
+@import "../../../../assets/style/misc/fonts.scss";
+@import "../../../../assets/style/misc/colors.scss";
+
+.auth {
+  text-align: center;
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+  padding: 40px 0 0;
+  h4 {
+    margin-bottom: 40px;
+    position: relative;
+    &:after, &:before {
+      top: 15px;
+    }
+  }
+  p {
+    padding: 0;
+    opacity: 0.8;
+    color: $light_grey;
+    @include roboto(bold);
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 7px;
+
+  }
+  input[type="submit"] {
+    border-right: none;
+  }
+  //@extend .clearfix;
+}

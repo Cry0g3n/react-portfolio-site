@@ -1,0 +1,67 @@
+@import "../../../../assets/style/misc/fonts.scss";
+@import "../../../../assets/style/misc/colors.scss";
+@import "../../../../assets/style/misc/media.scss";
+@import "../../../../assets/style/misc/mixins.scss";
+
+.user, .auth {
+  width: 380px;
+  min-height: 395px;
+  max-height: 600px;
+  overflow: hidden;
+
+  background-color: rgba(#fcfcfc, 0.85);
+  border-radius: 4px 5px 5px 4px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  box-sizing: border-box;
+  position: relative;
+  @include phone {
+    margin: 0 auto;
+    width: (300/320)*100%;
+    max-width: 320px;
+  }
+
+}
+
+.user__photo {
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.user__image {
+  @include cover;
+}
+
+.user__name {
+  color: $dark_grey;
+  @include roboto(medium);
+  font-size: 1.75rem;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+  max-height: 70px;
+  overflow: hidden;
+  @include phone {
+    font-size: 21px;
+  }
+}
+
+.user__description {
+  color: $dark_grey;
+  @include roboto(regular);
+  line-height: 24px;
+  max-height: 50px;
+  overflow: hidden;
+  @include phone {
+    font-size: 14px;
+  }
+}
+
+.user .social {
+  margin-bottom: 40px;
+}
