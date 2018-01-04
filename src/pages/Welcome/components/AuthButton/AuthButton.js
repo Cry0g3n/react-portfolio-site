@@ -3,7 +3,7 @@ import {setAuthMode} from "../../../../actions/welcome";
 import {connect} from 'react-redux';
 import {getAuthMode} from "../../../../reducers/welcome";
 
-class AuthButton extends PureComponent {
+export class AuthButton extends PureComponent {
     handleClick = e => {
         e.preventDefault();
         const {authMode, setAuthMode} = this.props;

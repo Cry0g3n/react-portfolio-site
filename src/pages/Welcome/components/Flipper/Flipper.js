@@ -5,7 +5,7 @@ import {getAuthMode} from "../../../../reducers/welcome";
 import {connect} from "react-redux";
 import cx from 'classnames';
 
-class Flipper extends PureComponent {
+export class Flipper extends PureComponent {
     render() {
         const {authMode} = this.props;
 

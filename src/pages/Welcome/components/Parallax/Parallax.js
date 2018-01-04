@@ -10,7 +10,7 @@ import Cloud0 from '../../../../assets/images/bg/parallax/cloud0.png';
 import Cloud65 from '../../../../assets/images/bg/parallax/cloud65.png';
 import Sky3 from '../../../../assets/images/bg/parallax/sky3.png';
 
-class Parallax extends PureComponent {
+export class Parallax extends PureComponent {
 
     mouseMoveHandler = e => {
         const mouseX = e.pageX;
