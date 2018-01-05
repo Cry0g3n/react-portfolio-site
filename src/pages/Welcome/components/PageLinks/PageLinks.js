@@ -1,19 +1,29 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Pages, PagesItem, PagesLink} from "./Styles";
 
 const PageLinks = () => {
+    const links = [
+        {
+            link: 'portfolio',
+            title: 'Мои работы'
+        },
+        {
+            link: 'about',
+            title: 'Обо мне'
+        },
+        {
+            link: 'blog',
+            title: 'Блог'
+        }
+    ];
     return (
-        <ul className="pages">
-            <li className="pages__item">
-                <Link to="/portfolio" className="pages__link">Мои работы</Link>
-            </li>
-            <li className="pages__item">
-                <Link to="/about" className="pages__link">Обо мне</Link>
-            </li>
-            <li className="pages__item">
-                <Link to="/blog" className="pages__link">Блог</Link>
-            </li>
-        </ul>
+        <Pages>
+            {links.map((data, i) => (
+                <PagesItem key={i}>
+                    <PagesLink to={`/${data.link}`}>{data.title}</PagesLink>
+                </PagesItem>
+            ))}
+        </Pages>
     );
 };
 

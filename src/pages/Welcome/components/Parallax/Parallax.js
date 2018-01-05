@@ -9,8 +9,14 @@ import Layer8 from '../../../../assets/images/bg/parallax/layer8.png';
 import Cloud0 from '../../../../assets/images/bg/parallax/cloud0.png';
 import Cloud65 from '../../../../assets/images/bg/parallax/cloud65.png';
 import Sky3 from '../../../../assets/images/bg/parallax/sky3.png';
+import {ParallaxContainer, ParallaxImage, ParallaxLayer} from "./Styles";
 
 export class Parallax extends PureComponent {
+
+    constructor() {
+        super();
+        this.layerList = [Layer5, Layer8, Layer7, Cloud65, Layer6, Layer4, Sky3, Layer2, Layer1, Cloud0];
+    }
 
     mouseMoveHandler = e => {
         const mouseX = e.pageX;
@@ -35,38 +41,13 @@ export class Parallax extends PureComponent {
 
     render() {
         return (
-            <div className="parallax">
-                <div className="parallax__layer">
-                    <img src={Layer5} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer8} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer7} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Cloud65} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer6} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer4} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Sky3} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer2} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Layer1} alt="" className="parallax__image"/>
-                </div>
-                <div className="parallax__layer">
-                    <img src={Cloud0} alt="" className="parallax__image"/>
-                </div>
-            </div>
+            <ParallaxContainer>
+                {this.layerList.map((layer, i) => (
+                    <ParallaxLayer key={i} className="parallax__layer">
+                        <ParallaxImage src={layer} alt=''/>
+                    </ParallaxLayer>
+                ))}
+            </ParallaxContainer>
         );
     }
 }

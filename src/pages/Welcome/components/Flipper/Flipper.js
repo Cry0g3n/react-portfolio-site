@@ -3,23 +3,23 @@ import User from "../User";
 import Auth from "../Auth";
 import {getAuthMode} from "../../../../reducers/welcome";
 import {connect} from "react-redux";
-import cx from 'classnames';
+import {Back, FlipContainer, FlipperMain, Front} from "./Styles";
 
 export class Flipper extends PureComponent {
     render() {
         const {authMode} = this.props;
 
         return (
-            <div className={cx('flip-container', {'flip-container__active': authMode})}>
-                <div className="flipper">
-                    <div className="front">
+            <FlipContainer>
+                <FlipperMain authMode={authMode}>
+                    <Front>
                         <User/>
-                    </div>
-                    <div className="back">
+                    </Front>
+                    <Back>
                         <Auth/>
-                    </div>
-                </div>
-            </div>
+                    </Back>
+                </FlipperMain>
+            </FlipContainer>
         );
     }
 }

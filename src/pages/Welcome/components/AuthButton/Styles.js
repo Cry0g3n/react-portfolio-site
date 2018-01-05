@@ -1,15 +1,16 @@
-@import "../../../../assets/style/misc/fonts.scss";
-@import "../../../../assets/style/misc/colors.scss";
-@import "../../../../assets/style/misc/media.scss";
+import styled from "styled-components";
+import {colors} from '../../../../styles/colors';
+import {media} from '../../../../styles/media';
+import {roboto} from '../../../../styles/fonts';
 
-.button__link {
+export const ButtonLink = styled.a`
   padding: 0 30px;
   color: white;
-  @include roboto(medium);
+  ${roboto('medium')};
   border: 1px solid white;
   border-radius: 5px;
   position: absolute;
-  right: (100/1800)*100%;
+  right: ${(100/1800)*100}%;
   top: 24px;
   font-size: 16px;
   line-height: 36px;
@@ -17,12 +18,12 @@
   text-decoration: none;
   &:hover {
     background: white;
-    color: $dark_green;
+    color: ${colors.dark_green};
   }
-  @include phone {
+  ${media.phone`
     left: 50%;
     right: inherit;
     box-sizing: border-box;
     transform: translateX(-50%);
-  }
-}
+  `}
+`;

@@ -1,10 +1,11 @@
 import React, {PureComponent} from 'react';
+import {AuthContainer, AuthHeader} from "./Styles";
 
 class Auth extends PureComponent {
     render() {
         return (
-            <div className="auth">
-                <h4>Авторизуйтесь</h4>
+            <AuthContainer>
+                <AuthHeader>Авторизуйтесь</AuthHeader>
                 {/*<form action="/auth" method="POST">*/}
                     {/*<div className="form__inline">*/}
                         {/*<i className="icon icon__people"></i>*/}
@@ -12,7 +13,7 @@ class Auth extends PureComponent {
                                {/*className="input input__login"/>*/}
                     {/*</div>*/}
                 {/*</form>*/}
-            </div>
+            </AuthContainer>
         );
     }
 }

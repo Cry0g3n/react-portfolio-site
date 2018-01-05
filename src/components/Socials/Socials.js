@@ -3,6 +3,7 @@ import ReactSVG from 'react-svg';
 import VK from '../../assets/icons/vk.svg';
 import GitHub from '../../assets/icons/github.svg';
 import LinkedIN from '../../assets/icons/in.svg';
+import {Social, SocialItem, SocialLink} from "./Styles";
 
 const Socials = () => {
     const socials = [
@@ -21,22 +22,18 @@ const Socials = () => {
     ];
 
     return (
-        <ul className="social">
-            {socials.map((data) => (
-                <li className="social__item" key={data.link}>
-                    <a href={data.link} target="_blank" className="social__link">
-                        {/*<svg className="social__svg">*/}
-                            {/*<use xlinkHref={data.icon}></use>*/}
-                        {/*</svg>*/}
-                        {/*<img src={data.icon} alt="" className="social__svg"/>*/}
+        <Social>
+            {socials.map((data, i) => (
+                <SocialItem key={i}>
+                    <SocialLink href={data.link} target="_blank">
                         <ReactSVG
                             path={data.icon}
                             className="social__svg"
                         />
-                    </a>
-                </li>
+                    </SocialLink>
+                </SocialItem>
             ))}
-        </ul>
+        </Social>
     );
 };
 

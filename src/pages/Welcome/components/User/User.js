@@ -2,18 +2,19 @@ import React from 'react';
 import Avatar from '../../../../assets/images/content/avatar.jpg';
 import PageLinks from "../PageLinks";
 import Socials from "../../../../components/Socials";
+import {UserContainer, UserDescription, UserImage, UserName, UserPhoto} from "./Styles";
 
 const User = () => {
     return (
-        <div className="user">
-            <div className="user__photo">
-                <img src={Avatar} alt="Шемяков Андрей Веб разработчик" className="user__image"/>
-            </div>
-            <p className="user__name">Шемяков Андрей</p>
-            <p className="user__description">Личный сайт веб разработчика</p>
+        <UserContainer>
+            <UserPhoto>
+                <UserImage src={Avatar} alt="Шемяков Андрей Веб разработчик"/>
+            </UserPhoto>
+            <UserName>Шемяков Андрей</UserName>
+            <UserDescription>Личный сайт веб разработчика</UserDescription>
             <Socials/>
             <PageLinks/>
-        </div>
+        </UserContainer>
     );
 };
 

@@ -1,10 +1,11 @@
 import React from 'react';
+import {CopyrightAuth} from "./Styles";
 
 const Footer = () => {
     return (
-        <footer className="copyright-auth">
+        <CopyrightAuth>
             <span className="copyright-auth__text">Шемяков Андрей | создано с любовью в LoftSchool | 2018</span>
-        </footer>
+        </CopyrightAuth>
     );
 };
 
