@@ -1,0 +1,44 @@
+/*vendor*/
+@import url(../node_modules/normalize.css/normalize.css);
+
+/*fonts*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
+
+@font-face {
+    font-family: 'BERNIERRegular-Regular';
+    src: url("./assets/fonts/bernier/BERNIERRegular-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/bernier/BERNIERRegular-Regular.otf") format("opentype"),
+    url("./assets/fonts/bernier/BERNIERRegular-Regular.woff") format("woff"),
+    url("./assets/fonts/bernier/BERNIERRegular-Regular.ttf") format("truetype"),
+    url("./assets/fonts/bernier/BERNIERRegular-Regular.svg#BERNIERRegular-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*common*/
+
+html, body {
+    height: 100%;
+    font: 16px/1.5 'Arial';
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    height: 100%;
+}
+
+a {
+    color: #6da3bd;
+    transition: all 0.3s linear;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button, input, label:after, label:before {
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
