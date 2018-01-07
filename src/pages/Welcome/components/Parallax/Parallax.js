@@ -35,7 +35,7 @@ export class Parallax extends PureComponent {
     };
 
     componentDidMount() {
-        this.parallaxLayerList = Array.from(document.getElementsByClassName('parallax__layer'));
+        this.parallaxLayerList = [...document.getElementsByClassName('parallax__layer')];
         document.addEventListener('mousemove', this.mouseMoveHandler);
     }
 

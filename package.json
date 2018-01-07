@@ -5,6 +5,7 @@
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "gsap": "^1.20.3",
     "normalize.css": "^7.0.0",
     "polished": "^1.9.0",
     "react": "^16.2.0",
