@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {rgba} from "polished";
-import {colors} from '../../../../styles/colors';
-import {roboto} from '../../../../styles/fonts';
-import {media} from '../../../../styles/media';
+import {colors} from '../../styles/colors';
+import {roboto} from '../../styles/fonts';
+import {media} from '../../styles/media';
 
 export const UserContainer = styled.div`
   width: 380px;
@@ -18,9 +18,33 @@ export const UserContainer = styled.div`
   position: relative;
   ${media.phone`
     margin: 0 auto;
-    width: (300/320)*100%;
+    width: ${(300/320)*100}%;
     max-width: 320px;
   `}
+  ${props => props.header ? `
+     background: none;
+     padding: 0;
+     margin: 0;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     min-height: inherit;
+     @include phone {
+       min-width: 320px;
+     }
+     @include tablet {
+       min-width: 768px;
+     }
+     @include desktop {
+       min-width: 1200px;
+     }
+     ${media.phone`
+       margin: 0 auto;
+       width: (300/320)*100%;
+       max-width: 320px;
+     `}
+  ` : ''};
 `;
 
 export const UserPhoto = styled.div`
@@ -49,6 +73,12 @@ export const UserName = styled.p`
   ${media.phone`
     font-size: 21px;
   `}
+  ${props => props.header ? `
+     color: white;
+     font-size: 2.18rem;
+     max-height: 100px;
+     overflow: hidden;
+  ` : ''};
 `;
 
 export const UserDescription = styled.p`
@@ -60,4 +90,13 @@ export const UserDescription = styled.p`
   ${media.phone`
     font-size: 14px;
   `}
+  ${props => props.header ? `
+     color: white;
+     font-size: 1rem;
+     max-height: 100px;
+     overflow: hidden;
+     ${media.phone`
+       font-size: 14px;
+     `}
+  ` : ''};
 `;

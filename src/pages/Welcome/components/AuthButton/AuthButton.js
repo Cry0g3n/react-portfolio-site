@@ -15,7 +15,6 @@ export class AuthButton extends PureComponent {
         return (
             <Fragment>
                 <ButtonLink href="/" onClick={this.handleClick}>Авторизоваться</ButtonLink>
-                {/*<a href="/" className="button button__link" onClick={this.handleClick}>Авторизоваться</a>*/}
             </Fragment>
         );
     }

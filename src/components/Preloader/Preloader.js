@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import TweenLite from 'gsap';
 import {PreloaderAnimate, PreloaderContainer, PreloaderPercent, PreloaderSpinner} from "./Styles";
 
-class Preloader extends Component {
+class Preloader extends PureComponent {
 
     constructor() {
         super();

@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactSVG from 'react-svg';
 import VK from '../../assets/icons/vk.svg';
 import GitHub from '../../assets/icons/github.svg';
 import LinkedIN from '../../assets/icons/in.svg';
-import {Social, SocialItem, SocialLink} from "./Styles";
+import {Social, SocialItem, SocialLink, SocialSVG} from "./Styles";
 
-const Socials = () => {
+const Socials = ({header}) => {
     const socials = [
         {
             link: "https://vk.com/shemyakov.andrey",
@@ -22,14 +21,11 @@ const Socials = () => {
     ];
 
     return (
-        <Social>
+        <Social header={header}>
             {socials.map((data, i) => (
                 <SocialItem key={i}>
-                    <SocialLink href={data.link} target="_blank">
-                        <ReactSVG
-                            path={data.icon}
-                            className="social__svg"
-                        />
+                    <SocialLink href={data.link} target="_blank" header={header}>
+                        <SocialSVG path={data.icon}/>
                     </SocialLink>
                 </SocialItem>
             ))}

@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import User from "../User";
+import User from "../../../../components/User";
 import Auth from "../Auth";
 import {getAuthMode} from "../../../../reducers/welcome";
 import {connect} from "react-redux";
